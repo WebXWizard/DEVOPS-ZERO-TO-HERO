@@ -82,9 +82,9 @@ To master the "Source-to-Server" workflow by building a solid foundation in the 
 ---
 
 ## 👤 Connect With Me
-- **GitHub:** [@YourUsername](https://github.com/YourUsername)
-- **LinkedIn:** [Your Name](https://linkedin.com/in/YourProfile)
-- **Portfolio:** [Link to your site]
+- **GitHub:** [@YourUsername](https://github.com/WebXWizard?tab=repositories)
+- **LinkedIn:** [Your Name](https://www.linkedin.com/in/shahe-alam-6a552b320/)
+- **Portfolio:** (https://devops-portfolio-kappa.vercel.app/)
 
 ---
 *Created for the 30 Days of DevOps Challenge.*
