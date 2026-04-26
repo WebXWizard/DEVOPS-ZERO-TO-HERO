@@ -1,0 +1,264 @@
+# 🚀 DevOps 30-Day Intensive Challenge - By WebXWizard
+
+## 📋 Overview
+A comprehensive 30-day roadmap to master essential DevOps skills from scratch to production-ready level.
+
+## 🎯 Challenge Structure
+
+### 📅 Week 1: Foundation & Cloud Basics
+
+| Day | Topics | Resources | Tasks |
+|-----|--------|-----------|-------|
+| 1 | Python Basics | [Code With Harry - Python Tutorial](https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME) | Install Python, write basic programs |
+| 2 | Networking Fundamentals | [5 Minutes Engineering - Networking](https://youtube.com/watch?v=_-RmuQ5ftUc) + [IT k Funde - Networking Basics](https://youtube.com/watch?v=4axM_mJZVM) | Understand IP addresses, subnets |
+| 3 | AWS EC2, S3, IAM | [TrainWithShubham - AWS Tutorial](https://youtube.com/playlist?list=PLdpzxOOAlwvLSNu-1R9MxLqR1QrQkD1tW) | Create AWS account, launch EC2 |
+| 4 | AWS VPC, Security | [Cloud Champ - VPC Tutorial](https://youtube.com/watch?v=g2JOHLHh4rI) | Create custom VPC, security groups |
+| 5 | Git & GitHub | [Code With Harry - Git Tutorial](https://youtube.com/playlist?list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi) | Create GitHub, practice commands |
+| 6 | Week 1 Revision | All Week 1 videos | Build small project |
+| 7 | Hands-on Practice | Practice only | Deploy website on EC2 |
+
+### 📅 Week 2: Containers & Configuration
+
+| Day | Topics | Resources | Tasks |
+|-----|--------|-----------|-------|
+| 8 | Docker Fundamentals | [Kunal Kushwaha - Docker Tutorial](https://youtube.com/watch?v=17Bl31rlnRM) | Install Docker, run containers |
+| 9 | Docker Advanced | [Hitesh Choudhary - Dockerfile](https://youtube.com/watch?v=6Er8MAvTWlI) | Create Dockerfile, build image |
+| 10 | Kubernetes Basics | [Kunal Kushwaha - K8s Tutorial](https://youtube.com/watch?v=KVBON1lA9N8) | Setup Minikube, understand pods |
+| 11 | K8s Services | [TechWorld with Nana - K8s](https://youtube.com/watch?v=X48VuDVv0do) | Create deployments, services |
+| 12 | Ansible Basics | [Raghu IIT - Ansible Tutorial](https://youtube.com/watch?v=Kui9p_thK5A) | Install Ansible, write playbook |
+| 13 | Week 2 Revision | All Week 2 videos | Dockerize app + deploy on K8s |
+| 14 | Project Day | Practice only | Complete app deployment |
+
+### 📅 Week 3: CI/CD & Infrastructure
+
+| Day | Topics | Resources | Tasks |
+|-----|--------|-----------|-------|
+| 15 | Jenkins Fundamentals | [Edureka Hindi - Jenkins](https://youtube.com/watch?v=FX322RVNGj4) | Install Jenkins, create jobs |
+| 16 | Jenkins Pipelines | [The DevOps Guide - Jenkins](https://youtube.com/watch?v=7KCS70s4KkE) | Create Jenkinsfile, pipeline |
+| 17 | Terraform Basics | [DevOps Decoded - Terraform](https://youtube.com/watch?v=3Rc7cZ1BmPk) | Install TF, create EC2 via TF |
+| 18 | Terraform Advanced | [Vikas Jha - Terraform AWS](https://youtube.com/watch?v=3Rc7cZ1BmPk) | Create VPC, modules in TF |
+| 19 | CI/CD Pipeline | [The DevOps Guide - CI/CD](https://youtube.com/watch?v=7KCS70s4KkE) | Build full CI/CD pipeline |
+| 20 | Week 3 Revision | All Week 3 videos | Infrastructure as Code |
+| 21 | Integration Day | Practice only | Complete CI/CD with Terraform |
+
+### 📅 Week 4: Monitoring & Final Projects
+
+| Day | Topics | Resources | Tasks |
+|-----|--------|-----------|-------|
+| 22 | Prometheus Basics | [Siva Teja - Prometheus](https://youtube.com/watch?v=7R3yhFOy6E8) | Install Prometheus, setup metrics |
+| 23 | Grafana Dashboards | [Siva Teja - Grafana](https://youtube.com/watch?v=7R3yhFOy6E8) | Create dashboards, connect Prometheus |
+| 24 | Azure Basics | [Azure A to Z - Azure Tutorial](https://youtube.com/watch?v=3Rc7cZ1BmPk) | Create Azure VM, compare AWS |
+| 25 | Security & Best Practices | [IT k Funde - Security](https://youtube.com/watch?v=G8d7AQj_X38) | Implement security practices |
+| 26-28 | Final Project | Practice only | Design complete DevOps pipeline |
+| 29-30 | Revision & Prep | All topics | Create cheat sheets, mock interview |
+
+## 🛠️ Tools & Technologies Covered
+
+### 🔧 Core Technologies
+- **Programming**: Python
+- **Version Control**: Git, GitHub
+- **Cloud Platforms**: AWS, Azure
+- **Containers**: Docker
+- **Orchestration**: Kubernetes
+- **Configuration Management**: Ansible
+- **Infrastructure as Code**: Terraform
+- **CI/CD**: Jenkins
+- **Monitoring**: Prometheus, Grafana
+
+### 🌐 Networking & Security
+- Networking: Subnets, VPC, CIDR, IP addressing
+- Protocols: HTTP/HTTPS, TCP, SSL/TLS, SSH, SMTP
+- Security: Firewall, Reverse Proxy, Forward Proxy, IAM
+
+## 📚 Learning Resources
+
+### 🎥 YouTube Channels (Hinglish) with Links
+
+1. **Code With Harry** - [Channel Link](https://youtube.com/@CodeWithHarry)
+   - Python, Git, Programming Basics
+
+2. **TrainWithShubham** - [Channel Link](https://youtube.com/@TrainWithShubham)
+   - AWS, DevOps, Cloud Technologies
+
+3. **Kunal Kushwaha** - [Channel Link](https://youtube.com/@KunalKushwaha)
+   - Docker, Kubernetes, DevOps
+
+4. **Cloud Champ** - [Channel Link](https://youtube.com/@CloudChamp)
+   - AWS Advanced, Cloud Architecture
+
+5. **IT k Funde** - [Channel Link](https://youtube.com/@ITkFunde)
+   - Networking, Security, IT Concepts
+
+6. **5 Minutes Engineering** - [Channel Link](https://youtube.com/@5MinutesEngineering)
+   - Networking, Technical Concepts
+
+7. **Edureka Hindi** - [Channel Link](https://youtube.com/@edurekahindi)
+   - Jenkins, DevOps Tools
+
+8. **DevOps Decoded** - [Channel Link](https://youtube.com/@DevOpsDecoded)
+   - Terraform, Infrastructure as Code
+
+9. **Siva Teja** - [Channel Link](https://youtube.com/@SivaTeja)
+   - Monitoring, Prometheus, Grafana
+
+10. **The DevOps Guide** - [Channel Link](https://youtube.com/@TheDevOpsGuide)
+    - CI/CD Pipelines, Jenkins
+
+11. **Hitesh Choudhary** - [Channel Link](https://youtube.com/@HiteshChoudharydotcom)
+    - Docker, DevOps, Backend
+
+12. **TechWorld with Nana** - [Channel Link](https://youtube.com/@TechWorldwithNana)
+    - Kubernetes, DevOps
+
+### 🌐 Websites
+- [JavaTpoint.com](https://www.javatpoint.com/devops-tutorial)
+- [GeeksforGeeks.org](https://www.geeksforgeeks.org/devops-tutorial/)
+- [TutorialsPoint.com](https://www.tutorialspoint.com/devops_tutorials.htm)
+- [DigitalOcean Community](https://www.digitalocean.com/community/tutorials)
+- [FreeCodeCamp.org](https://www.freecodecamp.org/news/tag/devops/)
+
+## 🎯 Projects to Build
+
+### 🚀 Week 1 Project
+**Static Website on AWS**
+- Create S3 bucket
+- Deploy static website
+- Configure EC2 instance
+- [Tutorial Reference](https://youtube.com/watch?v=3Rc7cZ1BmPk)
+
+### 🐳 Week 2 Project  
+**Dockerized Application**
+- Containerize Python/Node.js app
+- Create Dockerfile
+- Deploy on Kubernetes cluster
+- [Tutorial Reference](https://youtube.com/watch?v=17Bl31rlnRM)
+
+### 🔄 Week 3 Project
+**CI/CD Pipeline**
+- Jenkins pipeline setup
+- Automated testing
+- Deployment automation
+- [Tutorial Reference](https://youtube.com/watch?v=7KCS70s4KkE)
+
+### 📊 Week 4 Project
+**Complete DevOps Pipeline**
+- Infrastructure as Code with Terraform
+- Container orchestration with Kubernetes
+- Monitoring with Prometheus + Grafana
+- Full CI/CD implementation
+- [Tutorial Reference](https://youtube.com/watch?v=7R3yhFOy6E8)
+
+## 💡 Success Tips
+
+### ⏰ Daily Routine
+- **1 hour**: Video tutorials
+- **1 hour**: Hands-on practice
+- **30 minutes**: Notes & revision
+- **Weekends**: Project building
+
+### ✅ Best Practices
+1. **Take notes** in your own words
+2. **Practice daily** without fail
+3. **Build projects** to reinforce learning
+4. **Use GitHub** for code management
+5. **Join communities** for support
+6. **Don't skip fundamentals**
+7. **Focus on understanding concepts**
+
+### 🎖️ Certification Preparation
+- [AWS Certified DevOps Engineer](https://aws.amazon.com/certification/certified-devops-engineer-professional/)
+- [Kubernetes Certification (CKAD/CKA)](https://training.linuxfoundation.org/certification/cka/)
+- [Terraform Associate](https://www.hashicorp.com/certification/terraform-associate)
+- [Docker Certified Associate](https://www.docker.com/certification/)
+
+## 📈 Progress Tracking
+
+### ✅ Daily Checklist
+- [ ] Watched tutorial videos
+- [ ] Completed hands-on practice
+- [ ] Updated notes
+- [ ] Pushed code to GitHub
+- [ ] Prepared for next day
+
+### 📊 Weekly Review
+- Week 1: Cloud fundamentals ✅
+- Week 2: Containers mastery ✅  
+- Week 3: Automation expertise ✅
+- Week 4: Production readiness ✅
+
+## 🤝 Support & Community
+
+### 💬 Join Communities
+- [DevOps LinkedIn Groups](https://www.linkedin.com/groups/25827/)
+- [GitHub Open Source Projects](https://github.com/topics/devops)
+- [Stack Overflow for doubts](https://stackoverflow.com/questions/tagged/devops)
+- [Reddit DevOps communities](https://www.reddit.com/r/devops/)
+
+### 🆘 When Stuck
+1. Check documentation first
+2. Search Stack Overflow
+3. Watch alternative tutorials
+4. Join community discussions
+5. Don't hesitate to ask for help
+
+## 🎉 Completion Benefits
+
+By completing this 30-day challenge, you'll have:
+- ✅ Solid DevOps foundation
+- ✅ Hands-on project experience
+- ✅ Production-ready skills
+- ✅ Portfolio of projects
+- ✅ Confidence for DevOps roles
+- ✅ Preparation for certifications
+
+## 🔗 Important Links
+
+### 📚 Documentation
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [Docker Documentation](https://docs.docker.com/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Terraform Documentation](https://www.terraform.io/docs/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+
+### 🛠️ Practice Platforms
+- [AWS Free Tier](https://aws.amazon.com/free/)
+- [Katacoda Interactive Labs](https://www.katacoda.com/)
+- [Play with Docker](https://labs.play-with-docker.com/)
+- [Kubernetes Playground](https://www.katacoda.com/courses/kubernetes)
+
+---
+
+**🚀 Start your DevOps journey today! Remember: Consistency is key!**
+
+---
+*Last updated: 2024-01-15*  
+*Maintained with ❤️ for DevOps enthusiasts*
+
+### 📞 Quick Support
+- **Email**: your-email@domain.com
+- **GitHub Issues**: [Create Issue](https://github.com/your-repo/issues)
+- **Discord**: [Join Community](https://discord.gg/your-invite-link)
+
+**⭐ Don't forget to star this repository if you find it helpful!**
+
+---
+
+## 📥 Download This Plan
+Save this file as `DevOps-30-Day-Challenge.md` and start your journey today!
+
+```bash
+# Create a new directory for your DevOps journey
+mkdir devops-30day-challenge
+cd devops-30day-challenge
+
+# Create this README file
+touch README.md
+# Copy the content above into this file
+
+# Create directory structure for your projects
+mkdir -p week{1..4}/projects notes scripts
+
+# Initialize git repository
+git init
+git add .
+git commit -m "Start DevOps 30-Day Challenge"

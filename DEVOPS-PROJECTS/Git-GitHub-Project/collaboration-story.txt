@@ -1,0 +1,6 @@
+Once upon a time, there was a junior developer.
+They were learning how to use Git.
+It seemed complicated at first.
+But they kept practicing every day.
+And eventually, they became a DevOps expert.
+The End.
