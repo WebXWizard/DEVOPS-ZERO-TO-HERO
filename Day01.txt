@@ -1,0 +1,63 @@
+👉 “Day 01 of #30DevOpsJourney”
+
+🚀 Deployed a 1-Tier Application on Linux using Nginx/Apache (KillerCoda Environment)
+
+🔹 Role:
+
+Aspiring DevOps Engineer | MERN Stack Developer
+
+🔹 Context:
+
+Taking my DevOps journey to the next level, I worked in a real-time Linux lab environment using KillerCoda to understand how production deployments actually work.
+
+🔹 Task:
+
+Successfully deployed a 1-Tier Web Application using a Linux server with proper web server configuration:
+
+⚙️ What I implemented:
+
+✅ Linux server setup & navigation
+
+✅ Installed and configured Nginx/Apache
+
+✅ Deployed static/dynamic web application
+
+✅ Configured ports & firewall rules
+
+✅ Managed file permissions & directory structure
+
+✅ Tested application via browser
+
+🔹 Format (Outcome):
+
+✔️ Live application running on Linux server
+
+✔️ Hands-on experience with Nginx/Apache web servers
+
+✔️ Strong understanding of deployment lifecycle
+
+✔️ Real-world debugging experience
+
+💡 Key Learnings:
+
+Difference between Nginx vs Apache
+
+Reverse proxy basics
+
+Linux process & service management
+
+Deployment best practices
+
+📸 Project Screenshots & Code Below 👇
+
+🔗 GitHub Repo: [https://github.com/WebXWizard/DEVOPS-ZERO-TO-HERO.git]
+
+
+
+💬 Open to feedback & collaboration!
+
+Thanks for DevOps Insiders Team For Motivation✅
+
+#DevOps #Linux #Nginx #Apache #WebServer #Cloud #KillerCoda #LearningInPublic #Deployment #MERNStack
+
+﻿

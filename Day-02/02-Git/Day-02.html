@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 02 | Git & GitHub Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --panel: #161b22;
+            --border: #30363d;
+            --git-orange: #f05032;
+            --github-white: #f0f6fc;
+            --accent: #238636;
+            --text-main: #c9d1d9;
+            --text-dim: #8b949e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .day-label {
+            color: var(--git-orange);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        h1 { font-size: 2.5rem; margin: 10px 0; color: var(--github-white); }
+
+        /* --- Git Workflow Container --- */
+        .workflow-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1100px;
+            gap: 20px;
+            position: relative;
+        }
+
+        .stage {
+            flex: 1;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-height: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .stage:hover { border-color: var(--git-orange); transform: translateY(-5px); }
+
+        .stage i { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-dim); }
+        .stage h3 { margin-bottom: 1rem; color: var(--github-white); }
+
+        .command-box {
+            background: #000;
+            color: #58a6ff;
+            padding: 8px;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* --- Arrows & Connectors --- */
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--git-orange);
+            font-size: 1.5rem;
+            padding-top: 100px;
+            animation: flow 2s infinite;
+        }
+
+        @keyframes flow {
+            0% { opacity: 0.3; transform: translateX(-5px); }
+            50% { opacity: 1; transform: translateX(5px); }
+            100% { opacity: 0.3; transform: translateX(-5px); }
+        }
+
+        /* --- Terminal Section --- */
+        .terminal {
+            width: 100%;
+            max-width: 800px;
+            background: #000;
+            border-radius: 8px;
+            margin-top: 3rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            background: #21262d;
+            padding: 10px 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .terminal-body {
+            padding: 20px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            line-height: 1.6;
+        }
+
+        .line { color: #d1d5da; }
+        .cmd { color: #79c0ff; }
+        .output { color: #8b949e; }
+        .cursor { display: inline-block; width: 8px; height: 18px; background: var(--git-orange); animation: blink 1s infinite; vertical-align: middle; }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        footer { margin-top: 3rem; color: var(--text-dim); font-size: 0.9rem; }
+
+        @media (max-width: 850px) {
+            .workflow-container { flex-direction: column; }
+            .arrow { transform: rotate(90deg); padding: 20px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <p class="day-label">Day 02: Version Control System</p>
+        <h1>Git Lifecycle & GitHub</h1>
+    </div>
+
+    <div class="workflow-container">
+        <!-- Stage 1 -->
+        <div class="stage">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Working Directory</h3>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Untracked changes & local edits.</p>
+            <div class="command-box">git init</div>
+        </div>
+
+        <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+        <!-- Stage 2 -->
+        <div class="stage" style="border-style: dashed;">
+            <i class="fas fa-list-ul"></i>
+            <h3>Staging Area</h3>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Preparing the snapshot (The Index).</p>
+            <div class="command-box">git add .</div>
+        </div>
+
+        <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+        <!-- Stage 3 -->
+        <div class="stage">
+            <i class="fas fa-database"></i>
+            <h3>Local Repo</h3>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Permanent history in .git folder.</p>
+            <div class="command-box">git commit -m ".."</div>
+        </div>
+
+        <div class="arrow" style="color: var(--accent);"><i class="fas fa-cloud-upload-alt"></i></div>
+
+        <!-- Stage 4 -->
+        <div class="stage" style="border-color: var(--accent);">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Remote collaboration & Backup.</p>
+            <div class="command-box">git push origin main</div>
+        </div>
+    </div>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <span style="font-size: 0.8rem; color: var(--text-dim); margin-left: 10px;">bash — 30-days-devops</span>
+        </div>
+        <div class="terminal-body">
+            <div class="line"><span class="cmd">$</span> git status</div>
+            <div class="output">On branch main</div>
+            <div class="output">Untracked files: (use "git add" to include in what will be committed)</div>
+            <div class="output" style="color: #f85149;">&nbsp;&nbsp;&nbsp;&nbsp;README.md</div>
+            <div class="line"><span class="cmd">$</span> git add README.md</div>
+            <div class="line"><span class="cmd">$</span> git commit -m "Day 02: Documentation Updated"</div>
+            <div class="output">[main (root-commit) 7a2b3c] Day 02: Documentation Updated</div>
+            <div class="line"><span class="cmd">$</span> git push origin main <span class="cursor"></span></div>
+        </div>
+    </div>
+
+    <footer>
+        DevOps Journey | Versioning the Future
+    </footer>
+
+</body>
+</html>
