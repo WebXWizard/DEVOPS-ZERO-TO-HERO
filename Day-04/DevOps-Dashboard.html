@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master DevOps & AWS Architect Roadmap</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #bc13fe;
+            --aws-orange: #ff9900;
+            --bg-dark: #08090d;
+            --sidebar-bg: rgba(13, 14, 22, 0.98);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --success: #00ff88;
+            --danger: #ff4d4d;
+            --glow: 0 0 15px rgba(0, 242, 255, 0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+        }
+
+        /* --- UI Elements --- */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--primary);
+        }
+
+        /* --- Sidebar --- */
+        nav {
+            width: 280px; height: 100vh; background: var(--sidebar-bg);
+            border-right: 1px solid var(--border); position: fixed;
+            padding: 2rem 1.5rem; display: flex; flex-direction: column; z-index: 100;
+        }
+
+        .nav-links { list-style: none; margin-top: 2rem; }
+        .nav-links a {
+            color: var(--text-dim); text-decoration: none; font-size: 0.9rem;
+            padding: 0.8rem 1rem; display: flex; align-items: center; gap: 12px;
+            border-radius: 12px; transition: 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(0, 242, 255, 0.1); color: var(--primary);
+        }
+
+        /* --- Main Content --- */
+        main { flex: 1; margin-left: 280px; padding: 2rem 4rem; max-width: 1400px; }
+
+        .section-title { font-size: 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 15px; color: var(--primary); }
+
+        .resource-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .resource-link {
+            display: flex; align-items: center; gap: 10px; color: var(--success);
+            text-decoration: none; font-size: 0.85rem; margin-bottom: 8px; transition: 0.2s;
+        }
+        .resource-link:hover { text-decoration: underline; color: #fff; }
+
+        .time-est { color: var(--secondary); font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 1rem; }
+
+        /* --- Animations --- */
+        section { opacity: 0; transform: translateY(30px); transition: 0.8s all ease-out; }
+        section.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1024px) {
+            nav { width: 80px; }
+            nav span { display: none; }
+            main { margin-left: 80px; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: 700; color: var(--primary); font-size: 1.4rem;">
+            <i class="fas fa-cloud"></i> <span>CLOUD_OPS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview"><i class="fas fa-home"></i> <span>Overview</span></a></li>
+            <li><a href="#linux"><i class="fab fa-linux"></i> <span>Linux & Network</span></a></li>
+            <li><a href="#git"><i class="fab fa-github"></i> <span>Git & Python</span></a></li>
+            <li><a href="#aws"><i class="fab fa-aws"></i> <span>AWS Core</span></a></li>
+            <li><a href="#containers"><i class="fab fa-docker"></i> <span>Containers & K8s</span></a></li>
+            <li><a href="#automation"><i class="fas fa-robot"></i> <span>IaC & CI/CD</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="overview" class="visible">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">DevOps + AWS Blueprint</h1>
+            <p style="color: var(--text-dim); max-width: 800px;">
+                This roadmap is structured to take you from absolute beginner to advanced cloud engineer. 
+                Estimated total time: <strong>10-14 months</strong>[cite: 29].
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+                <div class="glass-card" style="margin-bottom: 0;">
+                    <i class="fas fa-brain" style="color: var(--primary); font-size: 2rem;"></i>
+                    <h3 style="margin-top: 1rem;">Learning Hours</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Dedicating 3 to 5 hours daily is recommended for optimal progress[cite: 27].</p>
+                </div>
+                <div class="glass-card" style="margin-bottom: 0;">
+                    <i class="fas fa-graduation-cap" style="color: var(--secondary); font-size: 2rem;"></i>
+                    <h3 style="margin-top: 1rem;">Phase Strategy</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Beginner (3 phases) → Intermediate (6 phases) → Advanced (3 phases)[cite: 29].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="linux">
+            <h2 class="section-title"><i class="fab fa-linux"></i> Linux & Networking</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="glass-card">
+                    <span class="badge">Beginner</span>
+                    <h3 style="margin-top: 10px;">Linux Fundamentals</h3>
+                    <span class="time-est">Time: 2-3 Weeks [cite: 38]</span>
+                    <p style="font-size: 0.9rem;">Linux is essential as most servers run on it; mastering the command line and Bash scripting is a must[cite: 36, 37].</p>
+                    <div class="resource-box">
+                        <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 8px;">TOP RESOURCES:</p>
+                        <a href="https://github.com/jlevy/the-art-of-command-line" class="resource-link"><i class="fab fa-github"></i> The Art of Command Line</a>
+                        <a href="https://linuxjourney.com/" class="resource-link"><i class="fas fa-external-link-alt"></i> Linux Journey (Interactive)</a>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <span class="badge">Beginner</span>
+                    <h3 style="margin-top: 10px;">Networking Concepts</h3>
+                    <span class="time-est">Time: 2 Weeks [cite: 54]</span>
+                    <p style="font-size: 0.9rem;">Understanding how data moves (OSI, TCP/IP, DNS) is key to managing infrastructure[cite: 52, 56, 58].</p>
+                    <div class="resource-box">
+                        <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 8px;">TOP RESOURCES:</p>
+                        <a href="https://github.com/alex/what-happens-when" class="resource-link"><i class="fab fa-github"></i> What Happens When (Detailed Flow)</a>
+                        <a href="https://www.wireshark.org/docs/" class="resource-link"><i class="fas fa-external-link-alt"></i> Wireshark Network Analysis [cite: 53]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="git">
+            <h2 class="section-title"><i class="fab fa-python"></i> Git & Automation</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="glass-card">
+                    <span class="badge">Beginner</span>
+                    <h3 style="margin-top: 10px;">Version Control (Git)</h3>
+                    <span class="time-est">Time: 1-2 Weeks [cite: 69]</span>
+                    <p style="font-size: 0.9rem;">Essential for collaborating on code and tracking changes across projects[cite: 67, 68].</p>
+                    <div class="resource-box">
+                        <a href="https://learngitbranching.js.org/" class="resource-link"><i class="fas fa-gamepad"></i> Learn Git Branching (Game)</a>
+                        <a href="https://github.com/karan/Projects" class="resource-link"><i class="fab fa-github"></i> Project Ideas Repo</a>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <span class="badge">Beginner</span>
+                    <h3 style="margin-top: 10px;">Programming (Python)</h3>
+                    <span class="time-est">Time: 4-6 Weeks [cite: 87]</span>
+                    <p style="font-size: 0.9rem;">Use Python syntax and libraries to automate repetitive tasks and handle configurations[cite: 85, 86, 95].</p>
+                    <div class="resource-box">
+                        <a href="https://github.com/Asabeneh/30-Days-Of-Python" class="resource-link"><i class="fab fa-github"></i> 30 Days of Python</a>
+                        <a href="https://automatetheboringstuff.com/" class="resource-link"><i class="fas fa-book"></i> Automate the Boring Stuff</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aws">
+            <h2 class="section-title"><i class="fab fa-aws" style="color: var(--aws-orange);"></i> AWS Cloud Essentials</h2>
+            <div class="glass-card" style="border-left: 4px solid var(--aws-orange);">
+                <span class="badge" style="background: rgba(255, 153, 0, 0.1); color: var(--aws-orange);">Intermediate</span>
+                <h3 style="margin-top: 10px;">Cloud Infrastructure</h3>
+                <span class="time-est">Time: 4-6 Weeks [cite: 29]</span>
+                <p style="font-size: 0.9rem;">Focus on core services: EC2 (Compute), S3 (Storage), IAM (Security), and VPC (Networking)[cite: 108, 109, 110, 111].</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                    <div class="resource-box">
+                        <p style="font-weight: 600; font-size: 0.7rem; margin-bottom: 5px;">CORE REPOS:</p>
+                        <a href="https://github.com/donnemartin/system-design-primer" class="resource-link" style="font-size: 0.75rem;">System Design Primer</a>
+                        <a href="https://github.com/open-guides/og-aws" class="resource-link" style="font-size: 0.75rem;">The Open Guide to AWS</a>
+                    </div>
+                    <div class="resource-box">
+                        <p style="font-weight: 600; font-size: 0.7rem; margin-bottom: 5px;">HANDS-ON:</p>
+                        <a href="https://aws.amazon.com/getting-started/hands-on/" class="resource-link" style="font-size: 0.75rem;">AWS Hands-on Labs</a>
+                        <a href="https://cloudresumechallenge.dev/" class="resource-link" style="font-size: 0.75rem;">The Cloud Resume Challenge</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="containers">
+            <h2 class="section-title"><i class="fab fa-docker"></i> Containers & K8s</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="glass-card">
+                    <span class="badge">Intermediate</span>
+                    <h3 style="margin-top: 10px;">Docker Containerization</h3>
+                    <span class="time-est">Time: 3-4 Weeks [cite: 137]</span>
+                    <p style="font-size: 0.9rem;">Package applications and dependencies into containers to ensure consistency across environments[cite: 134, 135].</p>
+                    <div class="resource-box">
+                        <a href="https://github.com/veggiemonk/awesome-docker" class="resource-link"><i class="fab fa-github"></i> Awesome Docker List</a>
+                        <a href="https://labs.play-with-docker.com/" class="resource-link"><i class="fas fa-terminal"></i> Play with Docker (Sandbox)</a>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <span class="badge">Intermediate</span>
+                    <h3 style="margin-top: 10px;">Kubernetes Orchestration</h3>
+                    <span class="time-est">Time: 4-6 Weeks [cite: 158]</span>
+                    <p style="font-size: 0.9rem;">Automate deployment, scaling, and management of complex containerized applications[cite: 155, 156].</p>
+                    <div class="resource-box">
+                        <a href="https://github.com/kelseyhightower/kubernetes-the-hard-way" class="resource-link"><i class="fab fa-github"></i> K8s The Hard Way</a>
+                        <a href="https://kubernetes.io/docs/tutorials/" class="resource-link"><i class="fas fa-book"></i> Official K8s Tutorials</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="automation">
+            <h2 class="section-title"><i class="fas fa-robot"></i> Advanced Automation</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="glass-card">
+                    <span class="badge" style="background: rgba(188, 19, 254, 0.1); color: var(--secondary);">Advanced</span>
+                    <h3 style="margin-top: 10px;">Infrastructure as Code</h3>
+                    <span class="time-est">Time: 3-4 Weeks [cite: 173]</span>
+                    <p style="font-size: 0.9rem;">Use Terraform to automate setup and management of infrastructure through machine-readable configuration[cite: 169, 170].</p>
+                    <div class="resource-box">
+                        <a href="https://github.com/shuaibiyy/awesome-terraform" class="resource-link"><i class="fab fa-github"></i> Awesome Terraform</a>
+                        <a href="https://developer.hashicorp.com/terraform/tutorials" class="resource-link"><i class="fas fa-graduation-cap"></i> HashiCorp Learn</a>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <span class="badge" style="background: rgba(188, 19, 254, 0.1); color: var(--secondary);">Advanced</span>
+                    <h3 style="margin-top: 10px;">Monitoring & Logging</h3>
+                    <span class="time-est">Time: 3-4 Weeks [cite: 178]</span>
+                    <p style="font-size: 0.9rem;">Track performance and health using Prometheus and Grafana for observability[cite: 174, 177].</p>
+                    <div class="resource-box">
+                        <a href="https://github.com/prometheus/prometheus" class="resource-link"><i class="fab fa-github"></i> Prometheus Repo</a>
+                        <a href="https://grafana.com/play" class="resource-link"><i class="fas fa-chart-line"></i> Grafana Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.5; border-top: 1px solid var(--border);">
+            <p>Roadmap Content based on <strong>Code with Mosh</strong> | codewithmosh.com [cite: 6, 20]</p>
+        </footer>
+    </main>
+
+    <script>
+        // Scroll Animation Logic
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(s => observer.observe(s));
+
+        // Navbar Active Highlighting
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
