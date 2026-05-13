@@ -1,0 +1,14 @@
+{
+  "name": "docker-network-volume-task-tracker",
+  "version": "1.0.0",
+  "description": "Beginner Docker project using networking and volumes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
+  }
+}
+
