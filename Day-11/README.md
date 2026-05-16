@@ -16,7 +16,6 @@ Day-11/
 |-- 01-Docker-Networking-Beginner-Guide.md
 |-- 02-Docker-Volumes-Beginner-Guide.md
 |-- 03-Commands-Cheat-Sheet.md
-`-- Project-Task-Tracker/
 ```
 
 ## What You Will Learn
@@ -30,13 +29,5 @@ Day-11/
 - Difference between named volumes and bind mounts
 - How to build a small project using networking and volumes together
 
-## Practice Goal
 
-After reading the guides, complete the project inside:
-
-```text
-Day-11/Project-Task-Tracker
-```
-
-The project runs a small Node.js app and a MongoDB database using Docker Compose.
 
