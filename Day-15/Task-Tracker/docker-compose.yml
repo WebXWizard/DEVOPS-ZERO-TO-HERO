@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: tasktracker_app
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - PORT=${PORT}
+    depends_on:
+      - mongo
+    networks:
+      - tasknet
+
+  mongo:
+    image: mongo:6.0
+    container_name: tasktracker_mongo
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - tasknet
+
+volumes:
+  mongo-data:
+
+networks:
+  tasknet:
+    driver: bridge
